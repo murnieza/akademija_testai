@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <form action="">
+                <input value="{{ a }}" name="a">
+                <button disabled>{{ operation }}</button>
+                <input value="{{ b }}" name="b">
+                <button disabled>=</button>
+                <input readonly name="answer" value="{{ result }}">
+                <hr>
+                <button name="operation" value="+">+</button>
+                <button name="operation" value="-">-</button>
+                <button name="operation" value="*">*</button>
+                <button name="operation" value="/">/</button>
+                <hr>
+                <button name="operation" value="^">^</button>
+                <button name="operation" value="!">!</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
+    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 21px; margin-bottom: 1em; }
+    p { margin: 0 0 1em 0; }
+    button, input { height: 150px; width: 150px; font-size: 75px; text-align: center; }
+
+</style>
+{% endblock %}

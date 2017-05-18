@@ -1,0 +1,8 @@
+services:
+    app.calculator:
+        class: AppBundle\Service\LocalCalculator
+        arguments:
+            - "@app.api_calculator"
+
+    app.api_calculator:
+        class: AppBundle\Service\ApiCalculator
